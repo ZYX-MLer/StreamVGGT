@@ -4,11 +4,19 @@ import numpy as np
 import itertools
 import os
 import sys
+import re
 
 sys.path.append(osp.join(osp.dirname(__file__), "..", ".."))
 
 from dust3r.datasets.base.base_multiview_dataset import BaseMultiViewDataset
 from dust3r.utils.image import imread_cv2
+
+
+REGEXPR_DSLR = re.compile(r"(?:^|_)DSC\d+$")
+
+
+def is_dslr_image(name):
+    return REGEXPR_DSLR.search(str(name)) is not None
 
 
 class ScanNetpp_Multi(BaseMultiViewDataset):
@@ -50,7 +58,7 @@ class ScanNetpp_Multi(BaseMultiViewDataset):
                 dslr_ids = [
                     i + offset
                     for i in img_ids
-                    if imgs[i].startswith("DSC") and imgs[i] in imgs_on_disk
+                    if is_dslr_image(imgs[i]) and imgs[i] in imgs_on_disk
                 ]
                 iphone_ids = [
                     i + offset
