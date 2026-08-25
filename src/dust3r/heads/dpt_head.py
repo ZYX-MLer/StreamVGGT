@@ -17,7 +17,7 @@ from dust3r.heads.postprocess import (
     reg_dense_conf,
 )
 import dust3r.utils.path_to_croco  # noqa: F401
-from models.dpt_block import DPTOutputAdapter  # noqa
+from streamomega.dpt_block import DPTOutputAdapter  # noqa
 from dust3r.utils.camera import pose_encoding_to_camera, PoseDecoder
 from dust3r.blocks import ConditionModulationBlock
 from torch.utils.checkpoint import checkpoint

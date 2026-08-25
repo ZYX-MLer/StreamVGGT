@@ -16,8 +16,8 @@ import torch
 from torch.utils.data import DataLoader
 
 import utils.misc as misc
-from models.croco_downstream import CroCoDownstreamBinocular
-from models.head_downstream import PixelwiseTaskWithDPT
+from streamomega.croco_downstream import CroCoDownstreamBinocular
+from streamomega.head_downstream import PixelwiseTaskWithDPT
 
 from stereoflow.criterion import *
 from stereoflow.datasets_stereo import get_test_datasets_stereo

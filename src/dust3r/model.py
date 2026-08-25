@@ -27,7 +27,7 @@ from dust3r.heads import head_factory
 from dust3r.utils.camera import PoseEncoder
 from dust3r.patch_embed import get_patch_embed
 import dust3r.utils.path_to_croco  # noqa: F401
-from models.croco import CroCoNet, CrocoConfig  # noqa
+from streamomega.croco import CroCoNet, CrocoConfig  # noqa
 from dust3r.blocks import (
     Block,
     DecoderBlock,

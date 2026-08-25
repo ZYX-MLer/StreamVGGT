@@ -16,7 +16,7 @@ from dust3r.heads.postprocess import (
     reg_dense_conf,
 )
 import dust3r.utils.path_to_croco  # noqa
-from models.blocks import Mlp  # noqa
+from streamomega.blocks import Mlp  # noqa
 from dust3r.utils.geometry import geotrf
 from dust3r.utils.camera import pose_encoding_to_camera, PoseDecoder
 from dust3r.blocks import ConditionModulationBlock

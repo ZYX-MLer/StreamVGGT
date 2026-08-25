@@ -115,7 +115,7 @@ def interpolate_pos_embed(model, checkpoint_model):
 # ----------------------------------------------------------
 
 try:
-    from models.curope import cuRoPE2D
+    from streamomega.curope import cuRoPE2D
 
     RoPE2D = cuRoPE2D
 except ImportError:

@@ -24,9 +24,9 @@ from torch.utils.data import DataLoader
 import utils
 import utils.misc as misc
 from utils.misc import NativeScalerWithGradNormCount as NativeScaler
-from models.croco_downstream import CroCoDownstreamBinocular, croco_args_from_ckpt
-from models.pos_embed import interpolate_pos_embed
-from models.head_downstream import PixelwiseTaskWithDPT
+from streamomega.croco_downstream import CroCoDownstreamBinocular, croco_args_from_ckpt
+from streamomega.pos_embed import interpolate_pos_embed
+from streamomega.head_downstream import PixelwiseTaskWithDPT
 
 from stereoflow.datasets_stereo import (
     get_train_dataset_stereo,
